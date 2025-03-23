@@ -7,7 +7,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Koperasi Undiksha', style: TextStyle(color: Colors.white)),
         centerTitle: true,
-        backgroundColor: Colors.blue,
+        backgroundColor: Color(0xFF1A237E),
       ),
       body: Padding(
         padding: EdgeInsets.all(16.0),
@@ -63,7 +63,7 @@ class HomePage extends StatelessWidget {
       width: double.infinity,
       padding: EdgeInsets.all(10.0),
       decoration: BoxDecoration(
-        color: Colors.blue,
+        color: Color(0xFF1A237E),
         borderRadius: BorderRadius.circular(10),
       ),
       child: Column(
@@ -90,7 +90,7 @@ class HomePage extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.all(10),
         decoration: BoxDecoration(
-          color: Colors.blue,
+          color: Color(0xFF1A237E),
           borderRadius: BorderRadius.circular(10),
         ),
         child: Column(
@@ -129,7 +129,7 @@ class HomePage extends StatelessWidget {
               '0878-1234-1024',
               style: TextStyle(
                 fontSize: 18,
-                color: Colors.blue,
+                color: Color(0xFF1A237E),
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -145,7 +145,7 @@ class HomePage extends StatelessWidget {
         Container(
           padding: EdgeInsets.all(10),
           decoration: BoxDecoration(
-            color: Colors.blue,
+            color: Color(0xFF1A237E),
             borderRadius: BorderRadius.circular(10),
           ),
           child: Icon(icon, size: 30, color: Colors.white),
@@ -155,7 +155,7 @@ class HomePage extends StatelessWidget {
           title,
           style: TextStyle(
             fontSize: 14,
-            color: Colors.blue,
+            color: Color(0xFF1A237E),
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -169,7 +169,7 @@ class HomePage extends StatelessWidget {
         Container(
           padding: EdgeInsets.all(10),
           decoration: BoxDecoration(
-            color: Colors.blue,
+            color: Color(0xFF1A237E),
             borderRadius: BorderRadius.circular(10),
             boxShadow: [
               BoxShadow(
@@ -186,7 +186,7 @@ class HomePage extends StatelessWidget {
           title,
           style: TextStyle(
             fontSize: 14,
-            color: Colors.blue,
+            color: Color(0xFF1A237E),
             fontWeight: FontWeight.bold,
           ),
         ),

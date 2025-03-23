@@ -28,7 +28,9 @@ class _LoginPageState extends State<LoginPage> {
         );
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Username dan password harus sama dengan NIM!')),
+          SnackBar(
+            content: Text('Username dan password harus sama dengan NIM!'),
+          ),
         );
       }
     }
@@ -43,7 +45,7 @@ class _LoginPageState extends State<LoginPage> {
         body: Column(
           children: [
             Container(height: MediaQuery.of(context).padding.top),
-            
+
             Container(
               width: double.infinity,
               padding: EdgeInsets.symmetric(vertical: 15),
@@ -59,7 +61,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
             ),
-            
+
             Expanded(
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 16),
@@ -67,13 +69,9 @@ class _LoginPageState extends State<LoginPage> {
                   child: Column(
                     children: [
                       SizedBox(height: 30),
-                      Image.asset(
-                        'assets/logo.png',
-                        width: 150,
-                        height: 150,
-                      ),
+                      Image.asset('assets/logo.png', width: 150, height: 150),
                       SizedBox(height: 30),
-                      
+
                       Container(
                         decoration: BoxDecoration(
                           color: Colors.white,
@@ -94,66 +92,121 @@ class _LoginPageState extends State<LoginPage> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text('Username', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500)),
+                              Text(
+                                'Username',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
                               SizedBox(height: 5),
                               TextFormField(
                                 controller: usernameController,
                                 decoration: InputDecoration(
-                                  contentPadding: EdgeInsets.symmetric(vertical: 12, horizontal: 10),
+                                  contentPadding: EdgeInsets.symmetric(
+                                    vertical: 12,
+                                    horizontal: 10,
+                                  ),
                                   border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(5),
                                   ),
                                 ),
-                                validator: (value) => value!.isEmpty ? 'Username tidak boleh kosong' : null,
+                                validator:
+                                    (value) =>
+                                        value!.isEmpty
+                                            ? 'Username tidak boleh kosong'
+                                            : null,
                               ),
                               SizedBox(height: 15),
-                              
-                              Text('Password', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500)),
+
+                              Text(
+                                'Password',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
                               SizedBox(height: 5),
                               TextFormField(
                                 controller: passwordController,
                                 obscureText: !_isPasswordVisible,
                                 decoration: InputDecoration(
-                                  contentPadding: EdgeInsets.symmetric(vertical: 12, horizontal: 10),
+                                  contentPadding: EdgeInsets.symmetric(
+                                    vertical: 12,
+                                    horizontal: 10,
+                                  ),
                                   border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(5),
                                   ),
                                   suffixIcon: IconButton(
-                                    icon: Icon(_isPasswordVisible ? Icons.visibility : Icons.visibility_off),
+                                    icon: Icon(
+                                      _isPasswordVisible
+                                          ? Icons.visibility
+                                          : Icons.visibility_off,
+                                    ),
                                     onPressed: () {
                                       setState(() {
-                                        _isPasswordVisible = !_isPasswordVisible;
+                                        _isPasswordVisible =
+                                            !_isPasswordVisible;
                                       });
                                     },
                                   ),
                                 ),
-                                validator: (value) => value!.isEmpty ? 'Password tidak boleh kosong' : null,
+                                validator:
+                                    (value) =>
+                                        value!.isEmpty
+                                            ? 'Password tidak boleh kosong'
+                                            : null,
                               ),
                               SizedBox(height: 20),
-                              
+
                               Center(
                                 child: ElevatedButton(
                                   style: ElevatedButton.styleFrom(
                                     backgroundColor: Color(0xFF1A237E),
-                                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
-                                    padding: EdgeInsets.symmetric(vertical: 12, horizontal: 40),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(25),
+                                    ),
+                                    padding: EdgeInsets.symmetric(
+                                      vertical: 12,
+                                      horizontal: 40,
+                                    ),
                                   ),
                                   onPressed: _login,
-                                  child: Text('Login', style: TextStyle(fontSize: 16, color: Colors.white)),
+                                  child: Text(
+                                    'Login',
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      color: Colors.white,
+                                    ),
+                                  ),
                                 ),
                               ),
-                              
+
                               SizedBox(height: 15),
                               Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   TextButton(
                                     onPressed: () {},
-                                    child: Text('Daftar Mbanking', style: TextStyle(color: Color(0xFF1A237E), fontSize: 12)),
+                                    child: Text(
+                                      'Daftar Mbanking',
+                                      style: TextStyle(
+                                        color: Color(0xFF1A237E),
+                                        fontSize: 12,
+                                      ),
+                                    ),
                                   ),
                                   TextButton(
                                     onPressed: () {},
-                                    child: Text('Lupa password?', style: TextStyle(color: Color(0xFF1A237E), fontSize: 12)),
+                                    child: Text(
+                                      'Lupa password?',
+                                      style: TextStyle(
+                                        color: Color(0xFF1A237E),
+                                        fontSize: 12,
+                                      ),
+                                    ),
                                   ),
                                 ],
                               ),
@@ -166,13 +219,16 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
             ),
-            
+
             Container(
               width: double.infinity,
               padding: EdgeInsets.symmetric(vertical: 10),
               color: Color(0xFFD1D9E6),
               child: Center(
-                child: Text('copyright @2022 by Undiksha', style: TextStyle(fontSize: 12, color: Colors.black)),
+                child: Text(
+                  'copyright @2022 by Undiksha',
+                  style: TextStyle(fontSize: 12, color: Colors.black),
+                ),
               ),
             ),
           ],

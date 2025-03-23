@@ -5,5 +5,5 @@ A new Flutter project.
 
 =======
 ![alt text](<Screenshot 2025-03-23 201854.png>)
-![alt text](<Screenshot 2025-03-23 201907.png>)
+![alt text](image.png)
 >>>>>>> 760ab12 (Menambahkan gambar ke README)

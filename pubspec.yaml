@@ -9,16 +9,23 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  url_launcher: ^6.1.12
+  shared_preferences: ^2.2.2
+  provider: ^6.0.0
+  qr_code_scanner: ^0.6.0
+  intl: ^0.18.1  # Tambahkan intl untuk format tanggal dan mata uang
+  mobile_scanner: ^0.0.1  # Tambahkan dependensi mobile_scanner untuk QR scanner
+  permission_handler: ^10.0.0  # Tambahkan permission_handler untuk izin aplikasi
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^5.0.0
+  flutter_lints: ^3.0.0  # Gunakan versi yang sesuai dengan Flutter SDK 3.7
+  font_awesome_flutter: ^10.6.0 # versi terbaru saat ini
 
 flutter:
   uses-material-design: true
-
   assets:
     - assets/logo.png
     - assets/candra.jpg
-    - assets/foto candraa.jpg
+    - assets/foto candraa.jpg  # Gunakan underscore, bukan spasi

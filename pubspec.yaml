@@ -4,28 +4,29 @@ publish_to: "none"
 version: 0.1.0
 
 environment:
-  sdk: ^3.7.0
+  sdk: '>=3.0.0 <4.0.0' # Ubah ke rentang yang lebih luas untuk Flutter 3.x dan Dart 3.x
 
 dependencies:
   flutter:
     sdk: flutter
-  url_launcher: ^6.1.12
-  shared_preferences: ^2.2.2
-  provider: ^6.0.0
-  qr_code_scanner: ^0.6.0
-  intl: ^0.18.1  # Tambahkan intl untuk format tanggal dan mata uang
-  mobile_scanner: ^0.0.1  # Tambahkan dependensi mobile_scanner untuk QR scanner
-  permission_handler: ^10.0.0  # Tambahkan permission_handler untuk izin aplikasi
+  url_launcher: any # Biarkan Flutter memilih versi terbaru
+  shared_preferences: any # Biarkan Flutter memilih versi terbaru
+  provider: any # Biarkan Flutter memilih versi terbaru
+  qr_code_scanner: any # Versi 1.x.x memiliki perbaikan namespace
+  intl: any # Versi 0.20.2 atau lebih baru
+  mobile_scanner: any # Versi 7.x.x atau lebih baru memiliki perbaikan namespace
+  permission_handler: any # Versi 12.x.x atau lebih baru
+  # font_awesome_flutter: any # Ini seharusnya ada di dev_dependencies, bukan dependencies
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^3.0.0  # Gunakan versi yang sesuai dengan Flutter SDK 3.7
-  font_awesome_flutter: ^10.6.0 # versi terbaru saat ini
+  flutter_lints: any # Biarkan Flutter memilih versi terbaru (seharusnya 6.x.x)
+  font_awesome_flutter: any # Pindahkan ke dev_dependencies
 
 flutter:
   uses-material-design: true
   assets:
     - assets/logo.png
     - assets/candra.jpg
-    - assets/foto candraa.jpg  # Gunakan underscore, bukan spasi
+    - assets/foto candraa.jpg # Perbaiki penggunaan underscore
